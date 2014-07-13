@@ -13,4 +13,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', ['clean', 'sass']);
+gulp.task('default', ['clean'], function(){
+	gulp.start('sass');
+});
